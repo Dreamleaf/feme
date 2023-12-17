@@ -78,6 +78,7 @@ main {
 h1 {
   font-size: 2.4rem;
   font-weight: 600;
+  color: var(--very-dark-blue);
 }
 h1 span {
   font-weight: 200;
