@@ -1,0 +1,143 @@
+:root {
+  --white: #ffffff;
+  /*Primary Colors*/
+--primary-red: hsl(0, 78%, 62%);
+--primary-cyan: hsl(180, 62%, 55%);
+--primary-orange: hsl(34, 97%, 64%);
+--primary-blue: hsl(212, 86%, 64%);
+/* Neutral Colors */
+--very-dark-blue: hsl(234, 12%, 34%);
+--grayish-blue: hsl(229, 6%, 66%);
+--very-light-gray: hsl(0, 0%, 98%);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--very-light-gray);
+  padding: 2rem;
+}
+main {
+  display: grid;
+  justify-items: center;
+}
+.intro {
+  text-align: center;
+  width: 320px;
+}
+.cards {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  row-gap: 3rem;
+  padding-top: 6rem;
+}
+.card {
+  background: rgb(255,255,255);
+  border-radius: 1rem;
+  border-top-left-radius: 3%;
+  border-top-right-radius: 3%;
+  padding: 0 3rem;
+  width: 311px;
+  height: 222px;
+  box-shadow: 0 10px 30px rgba(156, 173, 184, 0.527);
+  position: relative;
+}
+.card::after {
+  content: url("../images/icon-supervisor.svg");
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  width: 59px;
+  height: 59px;
+}
+.cyan {
+  background: linear-gradient(0deg, rgba(255,255,255,1) 98%, rgba(69,211,211,1) 98%);
+}
+.cyan::after {
+  content: url("../images/icon-supervisor.svg");
+}
+.red {
+  background: linear-gradient(0deg, rgba(255,255,255,1) 98%, rgba(234,83,83,1) 98%);
+}
+.red::after {
+  content: url("../images/icon-team-builder.svg");
+}
+.orange {
+  background: linear-gradient(0deg, rgba(255,255,255,1) 98%, rgba(252,175,74,1) 98%);
+}
+.orange::after {
+  content: url("../images/icon-karma.svg");
+}
+.blue {
+  background: linear-gradient(0deg, rgba(255,255,255,1) 98%, rgba(84,158,242,1) 98%);
+}
+.blue::after {
+  content: url("../images/icon-calculator.svg");
+}
+h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+h1 span {
+  font-weight: 200;
+}
+h1, h2 {
+  text-align: center;
+}
+h2 {
+  font-size: 1.6rem;
+}
+h2,p {
+  color: var(--grayish-blue);
+  font-weight: 400;
+}
+h3 {
+  color: var(--very-dark-blue);
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin: 3rem 0 0;
+}
+p {
+  font-size: 1.4rem;
+}
+
+footer {
+  text-align: center;
+}
+
+@media (min-width: 1142px) {
+  .intro {
+    width: 500px;
+  }
+  .cards {
+    display: grid;
+    grid-template-areas:
+    "left tcenter right"
+    "left bcenter right";
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 222px 1fr 30px;
+    align-items: center;
+    column-gap: 3rem;
+    row-gap: 3rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .card {
+    width: 350px;
+    height: 250px;
+  }
+  .cyan {
+    grid-area: left;
+  }
+  .red {
+    grid-area: tcenter;
+    margin-bottom: 3rem;
+  }
+  .orange {
+    grid-area: bcenter;
+  }
+  .blue {
+    grid-area: right;
+  }
+}
