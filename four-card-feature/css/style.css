@@ -140,4 +140,7 @@ footer {
   .blue {
     grid-area: right;
   }
+  h1 {
+    font-size: 3.4rem;
+  }
 }
