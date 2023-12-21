@@ -49,7 +49,7 @@ img {
 .tag {
   background-color: hsl(46, 93%, 65%);
   color: hsl(0, 0%, 0%);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 800;
   padding: 5px 10px;
   border-radius: 5px;
@@ -59,7 +59,7 @@ img {
 }
 .post-date {
   color: hsl(0, 0%, 0%);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 h1 {
